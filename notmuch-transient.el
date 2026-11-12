@@ -9,7 +9,7 @@
 
 ;; Package-Version: 1.2.3
 ;; Package-Requires: (
-;;     (emacs     "29.1")
+;;     (emacs     "30.1")
 ;;     (compat    "31.1")
 ;;     (notmuch   "0.39")
 ;;     (transient "0.13"))
@@ -72,7 +72,7 @@
 
 ;;; Hello
 
-;;;###autoload (autoload 'notmuch-hello-mode-transient "notmuch-transient" nil t)
+;;;###autoload
 (transient-define-prefix notmuch-hello-mode-transient ()
   "Command dispatcher for \"notmuch hello\" buffers."
   [["Search"
@@ -89,7 +89,7 @@
 
 ;;; Tree
 
-;;;###autoload (autoload 'notmuch-tree-mode-transient "notmuch-transient" nil t)
+;;;###autoload
 (transient-define-prefix notmuch-tree-mode-transient ()
   "Command dispatcher for \"notmuch tree\" buffers."
   :suffix-description #'transient-command-summary-or-name
@@ -124,7 +124,7 @@
 
 ;;; Search
 
-;;;###autoload (autoload 'notmuch-search-mode-transient "notmuch-transient" nil t)
+;;;###autoload
 (transient-define-prefix notmuch-search-mode-transient ()
   "Transient popup for \"notmuch search\" buffers."
   [["Reply"
@@ -147,7 +147,7 @@
     ("a" "archive"         notmuch-search-archive-thread)
     ("*" "tag all"         notmuch-search-tag-all)]])
 
-;;;###autoload (autoload 'notmuch-search-stash-transient "notmuch-transient" nil t)
+;;;###autoload
 (transient-define-prefix notmuch-search-stash-transient ()
   "Command dispatcher for stashing from \"notmuch search\" buffers."
   [["Stash"
@@ -156,7 +156,7 @@
 
 ;;; Show
 
-;;;###autoload (autoload 'notmuch-show-mode-transient "notmuch-transient" nil t)
+;;;###autoload
 (transient-define-prefix notmuch-show-mode-transient ()
   "Command dispatcher for \"notmuch show\" buffers."
   [["Do"
@@ -202,7 +202,7 @@
     ("Z" "tree"             notmuch-tree-from-show-current-query)
     ("U" "unthreaded"       notmuch-unthreaded-from-show-current-query)]])
 
-;;;###autoload (autoload 'notmuch-show-stash-transient "notmuch-transient" nil t)
+;;;###autoload
 (transient-define-prefix notmuch-show-stash-transient ()
   "Command dispatcher for stashing from \"notmuch show\" buffers."
   ["Stash"
@@ -219,7 +219,7 @@
     ("L" "link and go"    notmuch-show-stash-mlarchive-link-and-go)
     ("G" "git send-email" notmuch-show-stash-git-send-email)]])
 
-;;;###autoload (autoload 'notmuch-show-part-transient "notmuch-transient" nil t)
+;;;###autoload
 (transient-define-prefix notmuch-show-part-transient ()
   "Command dispatcher for acting on parts from \"notmuch show\" buffers."
   [["Part"
@@ -231,7 +231,7 @@
 
 ;;; Repeating
 
-;;;###autoload (autoload 'notmuch-search-transient "notmuch-transient" nil t)
+;;;###autoload
 (transient-define-prefix notmuch-search-transient ()
   "Repeat a saved search.
 
@@ -288,7 +288,7 @@ This is a replacement for `notmuch-jump-search'."
 
 ;;; Tagging
 
-;;;###autoload (autoload 'notmuch-tag-transient "notmuch-transient" nil t)
+;;;###autoload
 (transient-define-prefix notmuch-tag-transient ()
   "Quickly apply or reverse common tagging operations.
 
